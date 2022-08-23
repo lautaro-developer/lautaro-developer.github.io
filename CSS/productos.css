@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  text-decoration: none;
+  list-style: none;
+}
+
+body{
+  font-family: 'Montserrat';
+}
+/* poner texto en mayusculas */
+header img {
+  display: flex;
+  margin: 0 auto;
+
+  width: 172px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li a {
+  text-transform: uppercase;
+  color: #000;
+
+  /*ponelo en negrita*/
+  font-weight: bold;
+
+  margin: 0 0 0 20px;
+}
+nav ul li a:hover {
+  border-bottom: 2px solid;
+}
+
+.productos {
+  display: flex;
+  justify-content: center;
+}
+
+.div {
+  margin: 20px;
+  text-align: center;
+  box-shadow: 0px 0px 5px #000;
+  border-radius: 25px;
+
+  transition: all 400ms ease;
+}
+.div .textTitulo {
+  margin: 20px;
+}
+.div .textTitulo .text {
+  margin: 20px;
+}
+.div:hover {
+  box-shadow: 0px 0px 20px #000;
+}
+
+
+
+.imgPro{
+  width: 100%;
+}
+#separar {
+  margin: 20px 40px;
+}
+
+.btnReservar {
+  padding: 10px;
+  margin: 10px;
+
+  width: 200px;
+  cursor: pointer;
+}
+
+.recerbar {
+  width: 100%;
+}
+
+/* FOOTER */
+
+footer {
+  margin-top: 20px;
+
+  text-align: center;
+  background: url(../img/bg.jpg);
+
+  color: #fff;
+
+  padding: 60px;
+}
+
+@media screen and (max-width: 700px) {
+  .productos {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+
+  #separar {
+    margin: 20px;
+  }
+
+  nav ul li {
+    width: auto;
+  }
+
+  header img {
+    position: static;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  nav ul li a {
+    margin: 0 20px 0 20px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .productos {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
+  #separar {
+    margin: 20px;
+  }
+
+}
+
+@media screen and (min-width: 1000px) {
+  .productos {
+    display: flex;
+    flex-direction: row;
+  }
+  #separar {
+    margin: 20px;
+  }
+}

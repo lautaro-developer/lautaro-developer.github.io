@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alura - Login</title>
+    <link rel="shortcut icon" href="./img/aaa.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./CSS/login.css" />
+  </head>
+  <body>
+    <header>
+      <img src="img/logo.png" alt="" />
+      <nav>
+        <ul>
+          <li><a href="./home.html">Principal</a></li>
+          <li><a href="./productos.html">Productos</a></li>
+          <li><a href="./login.html">Sobre nosotro</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <form id="form">
+        <div class="contenedor">
+          <div class="nombre">
+            <!-- el for se usa para referenciar el input -->
+            <!-- cuando le das un click al label se activa el input -->
+            <label for="nombre">Nombre</label> <br />
+            <input
+              type="text"
+              id="nombre"
+              class="input"
+              placeholder="Ejem Lautaro"
+            />
+          </div>
+
+          <div class="apellido">
+            <label for="apellido">Apellido</label> <br />
+            <input
+              type="text"
+              id="apellido"
+              class="input"
+              placeholder="Ejem Diaz"
+            />
+          </div>
+
+          <div class="correo">
+            <label for="correo">Correo</label> <br />
+            <input
+              type="email"
+              id="correo"
+              class="input"
+              placeholder="example@example.com"
+            />
+          </div>
+          <div class="telefono">
+            <label for="telefono">Telefono</label> <br />
+            <input
+              type="tel"
+              id="telefono"
+              class="input"
+              placeholder="+xx xxx xxx xxxx"
+            />
+          </div>
+
+          <div class="textArea">
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="Que quiere pedir?"
+            ></textarea>
+          </div>
+        </div>
+        <div class="tablas">
+          <!-- tablas -->
+
+          <table>
+            <!-- HEADER de una Tabla -->
+            <thead>
+              <!-- Columnas  -->
+              <tr>
+                <!-- Filas  -->
+                <!-- poner las filas que pertenezcan a un encabezado  -->
+
+                <th>Dia</th>
+                <th>Horario</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Lunes</td>
+                <td>08 - 21</td>
+              </tr>
+
+              <tr>
+                <td>Miercoles</td>
+                <td>08 - 21</td>
+              </tr>
+
+              <tr>
+                <td>viernes</td>
+                <td>08 - 21</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- fin tablas -->
+
+        <div class="btn">
+          <button id="btn">Enviar</button>
+        </div>
+      </form>
+    </main>
+    <div class="puente"></div>
+    <footer id="footer">
+      <img id="imgLogoFooter" src="img/logo-blanco.png" alt="" />
+      <h2 id="textLogoFooter">
+        Peluqueria Alura <br />
+        2020-2022
+      </h2>
+    </footer>
+    <script>
+      let form = document.getElementById("form");
+      form.addEventListener("click", (e) => {
+        e.preventDefault();
+      });
+      document.getElementById("btn").addEventListener("click", () => {
+        form.reset();
+      });
+    </script>
+  </body>
+</html>
